@@ -14,8 +14,12 @@ export default {
             list: [
                 {name: "shabi1", isSelected: false},
                 {name: "shabi2", isSelected: false},
-                {name: "shabi3", isSelected: true, children: [
-                        {name:"subshabi1", isSelected: false},
+                {name: "shabi3", isSelected: false, children: [
+                        {name:"subshabi1", isSelected: false, children: [
+                                {name: "subsubshabi1", isSelected: false},
+                                {name: "subsubshabi2", isSelected: true},
+                                {name: "subsubshabi3", isSelected: false},
+                            ]},
                         {name:"subshabi2", isSelected: false},
                         {name:"subshabi3", isSelected: false},
                     ]},
