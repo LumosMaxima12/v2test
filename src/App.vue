@@ -11,6 +11,11 @@
 
                 </router-view>
             </template>
+            <template v-if="route_name === 'Home'" #right>
+                <div>
+                    <div> 右边框 </div>
+                </div>
+            </template>
         </Layout>
     </div>
 </template>
@@ -18,13 +23,25 @@
 <script>
 import SiteAside from "@/components/SiteAside";
 import Layout from "@/components/Layout";
+import {useRoute} from "vue-router/composables";
+import {computed} from "vue";
 export default {
     components: {
         Layout,
         SiteAside,
-    }
+    },
+    data() {
+        return {
+            route_name: computed(() => useRoute().name),
+            is_home: true,
+        }
+    },
 }
+
 </script>
+
+
+//nvm use 16.13.2
 
 <style lang="less" scoped>
 @import "~@/styles/mixin.less";
