@@ -35,7 +35,7 @@ export default {
 }
 .right-container {
     height: 100vh;
-    width: 15vw;
+    //width: 15vw;
 //    background: red;
 }
 </style>

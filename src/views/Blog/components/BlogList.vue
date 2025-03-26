@@ -96,7 +96,7 @@ export default {
     line-height: 1.7;
     position: relative;
     padding: 20px;
-    overflow-y: auto;
+    overflow-y: scroll;
     width: 100%;
     height: 100%;
     box-sizing: border-box;

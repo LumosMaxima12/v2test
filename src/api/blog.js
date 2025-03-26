@@ -23,6 +23,6 @@ export async function getBlogs(page = 1, limit = 10, categoryId = -1) {
  * @returns {Promise<axios.AxiosResponse<any>>}
  */
 
-export async function getBlogTypes() {
+export async function getBlogCategories() {
     return await request.get("/api/blogType");
 }
