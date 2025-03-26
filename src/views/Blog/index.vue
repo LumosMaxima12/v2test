@@ -31,11 +31,11 @@ export default {
 
 <style lang="less" scoped>
 .main-container {
-    background: lightsteelblue;
-
+    height: 100vh;
 }
 .right-container {
+    height: 100vh;
     width: 15vw;
-    background: red;
+//    background: red;
 }
 </style>

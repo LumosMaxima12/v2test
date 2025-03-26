@@ -6,7 +6,6 @@
         <a @click="handleClick(current + 1)" v-show="current !== pageNumber">&gt;&gt;</a>
         <a @click="handleClick(pageNumber)" v-show="current !== pageNumber">&gt;&gt;|</a>
     </div>
-
 </template>
 
 <script>
