@@ -2,13 +2,16 @@
 <div>
     <Layout>
         <template #default>
-            <BlogList />
+            <div class="main-container">
+                <BlogList />
+            </div>
         </template>
-        <template #left>
-            <BlogCategory />
+        <template #right>
+            <div class="right-container">
+                <BlogCategory />
+            </div>
         </template>
     </Layout>
-    文章, {{this.$route.params}}
 </div>
 </template>
 
@@ -23,17 +26,16 @@ export default {
         BlogList,
         BlogCategory,
     },
-    created() {
-        console.log(this.$route)
-    }
 }
 </script>
 
 <style lang="less" scoped>
 .main-container {
     background: lightsteelblue;
+
 }
 .right-container {
-    background: lightcyan;
+    width: 15vw;
+    background: red;
 }
 </style>
