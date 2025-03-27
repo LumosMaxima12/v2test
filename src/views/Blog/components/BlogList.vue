@@ -63,12 +63,13 @@ export default {
             if(this.routeInfo.categoryId === -1) {
                 this.$router.push({
                     name: "Blog",
-                    query
+                    query,
                 })
             }
             else {
                 this.$router.push({
                     name:"Blog",
+                    query,
                     params: {
                         categoryId: this.routeInfo.categoryId,
                     }
