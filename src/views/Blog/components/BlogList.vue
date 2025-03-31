@@ -15,7 +15,12 @@
                         <span>日期：{{formatDate(item.createDate)}}</span>
                         <span>浏览：{{item.scanNumber}}</span>
                         <span>评论：{{item.commentNumber}}</span>
-                        <a href="/article/category/8">{{item.category.name}}</a>
+                        <RouterLink :to="{
+                            name:'CategoryBlog',
+                            params: {
+                            categoryId: item.category.id
+                        }
+                        }">{{item.category.name}}</RouterLink>
                     </div>
                     <div class="description">
                         {{item.description}}

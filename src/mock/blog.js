@@ -40,4 +40,30 @@ Mock.mock(/^\/api\/blog(\?.+)?$/, "get", function (options) {
     })
 })
 
-console.log("blog启动")
+Mock.mock(/^\/api\/blog\/[^/]+$/, "get", {
+    code: 0,
+    msg: "",
+    date: {
+        id:"1",
+        title: "CORS跨域方案详解",
+        category: {
+            "id || 1-10": 1,
+            name: "分类@id",
+        },
+        description: "@cparagraph(1, 10)",
+        "scanNumber|0-10000": 0,
+        "commentNumber|0-100": 0,
+        createDate: "@date('T')",
+        toc:[
+            {name: "概述", anchor: "article-md-title-1"},
+            {
+                name
+            }
+        ],
+        "thumb|1": [
+            Mock.Random.image("300*250", "#000", "#fff", "Random Image"),
+            null,
+        ],
+        htmlContent: `<h1>haha<h1>`
+    }
+})
